@@ -1,0 +1,24 @@
+import { createRootRoute, Outlet, Link } from '@tanstack/react-router'
+import { TanStackDevtools } from '@tanstack/react-devtools'
+import { RadixThemeDevtoolsProvider, createRadixThemePlugin } from 'radix-themes-devtools'
+
+const themePlugin = createRadixThemePlugin({
+  defaultTheme: { accentColor: 'indigo', radius: 'medium', scaling: '100%' },
+})
+
+export const Route = createRootRoute({
+  component: () => (
+    <RadixThemeDevtoolsProvider plugin={themePlugin}>
+      <nav style={{ display: 'flex', gap: '12px', padding: '12px 16px', borderBottom: '1px solid var(--gray-5)' }}>
+        <Link to="/" style={{ textDecoration: 'none' }}>Home</Link>
+        <Link to="/about" style={{ textDecoration: 'none' }}>About</Link>
+      </nav>
+
+      <main style={{ padding: '24px' }}>
+        <Outlet />
+      </main>
+
+      <TanStackDevtools plugins={[themePlugin]} />
+    </RadixThemeDevtoolsProvider>
+  ),
+})
