@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
-import type { RadixThemeConfig, RadixThemeEvents } from './types'
-import type { EventClient } from '@tanstack/devtools-event-client'
+import type { RadixThemeConfig } from './types'
+import type { RadixThemeEventClient } from './client'
 
 const ACCENT_COLORS: RadixThemeConfig['accentColor'][] = [
   'gray', 'gold', 'bronze', 'brown', 'yellow', 'amber', 'orange', 'tomato',
@@ -21,7 +21,7 @@ const SCALING_VALUES: RadixThemeConfig['scaling'][] = [
 ]
 
 interface PanelProps {
-  client: EventClient<RadixThemeEvents>
+  client: RadixThemeEventClient
   defaultTheme?: RadixThemeConfig
 }
 
@@ -34,15 +34,18 @@ export function RadixThemePanel({ client, defaultTheme }: PanelProps) {
     scaling: '100%',
     panelBackground: 'translucent',
     ...defaultTheme,
+    ...client.currentTheme,
   })
 
   function update(patch: Partial<RadixThemeConfig>) {
     const next = { ...theme, ...patch }
     setTheme(next)
+    client.currentTheme = next
     client.emit('theme-changed', next)
   }
 
   useEffect(() => {
+    client.currentTheme = theme
     client.emit('theme-changed', theme)
   }, [])
 
