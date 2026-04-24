@@ -10,12 +10,12 @@ Change accent color, gray, radius, scaling, appearance and panel background with
 
 ## Requirements
 
-| Peer dependency                    | Version  |
-| ---------------------------------- | -------- |
-| `react`                            | `≥ 18`   |
-| `react-dom`                        | `≥ 18`   |
-| `@radix-ui/themes`                 | `≥ 3`    |
-| `@tanstack/devtools-event-client`  | `≥ 0.0.1`|
+| Peer dependency                   | Version   |
+| --------------------------------- | --------- |
+| `react`                           | `≥ 18`    |
+| `react-dom`                       | `≥ 18`    |
+| `@radix-ui/themes`                | `≥ 3`     |
+| `@tanstack/devtools-event-client` | `≥ 0.0.1` |
 
 ---
 
@@ -89,9 +89,9 @@ That's it. Open the TanStack Devtools panel and go to the **Radix Themes** tab.
 
 Creates the plugin object to pass to `<TanStackDevtools plugins={[...]} />`.
 
-| Option          | Type                 | Description                          |
-| --------------- | -------------------- | ------------------------------------ |
-| `defaultTheme`  | `RadixThemeConfig`   | Initial theme values for the panel.  |
+| Option         | Type               | Description                         |
+| -------------- | ------------------ | ----------------------------------- |
+| `defaultTheme` | `RadixThemeConfig` | Initial theme values for the panel. |
 
 Returns a plugin object with a `.client` property (the `EventClient`) if you need to listen to theme changes programmatically.
 
@@ -101,10 +101,10 @@ Returns a plugin object with a `.client` property (the `EventClient`) if you nee
 
 Wraps Radix's `<Theme>` and syncs it with the devtools panel.
 
-| Prop       | Type                                        | Required |
-| ---------- | ------------------------------------------- | -------- |
-| `plugin`   | Return type of `createRadixThemePlugin()`   | ✅       |
-| `children` | `React.ReactNode`                           | ✅       |
+| Prop       | Type                                      | Required |
+| ---------- | ----------------------------------------- | -------- |
+| `plugin`   | Return type of `createRadixThemePlugin()` | ✅       |
+| `children` | `React.ReactNode`                         | ✅       |
 
 ---
 
