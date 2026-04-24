@@ -7,7 +7,7 @@ import { resolve } from 'node:path'
 export default defineConfig({
   plugins: [
     react(),
-    dts({ include: ['src'], insertTypesEntry: true }),
+    dts({ include: ['src'], exclude: ['src/__tests__'], insertTypesEntry: true }),
   ],
   test: {
     environment: 'jsdom',
