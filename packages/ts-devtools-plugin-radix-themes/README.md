@@ -1,4 +1,4 @@
-# radix-themes-devtools
+# ts-devtools-plugin-radix-themes
 
 A [TanStack Devtools](https://tanstack.com/devtools/latest) plugin that lets you customize your [Radix UI Themes](https://www.radix-ui.com/themes) in real time — directly from the devtools panel.
 
@@ -22,11 +22,11 @@ Change accent color, gray, radius, scaling, appearance and panel background with
 ## Installation
 
 ```bash
-npm install radix-themes-devtools
+npm install ts-devtools-plugin-radix-themes
 # or
-pnpm add radix-themes-devtools
+pnpm add ts-devtools-plugin-radix-themes
 # or
-yarn add radix-themes-devtools
+yarn add ts-devtools-plugin-radix-themes
 ```
 
 You also need TanStack Devtools for your framework:
@@ -42,7 +42,7 @@ npm install @tanstack/react-devtools @tanstack/devtools-event-client
 ### 1. Create the plugin
 
 ```tsx
-import { createRadixThemePlugin } from 'radix-themes-devtools'
+import { createRadixThemePlugin } from 'ts-devtools-plugin-radix-themes'
 
 const themePlugin = createRadixThemePlugin({
   defaultTheme: {
@@ -63,7 +63,7 @@ All `defaultTheme` options are optional.
 `RadixThemeDevtoolsProvider` wraps Radix's `<Theme>` internally and listens for changes from the devtools panel. Replace your existing `<Theme>` wrapper with it.
 
 ```tsx
-import { RadixThemeDevtoolsProvider } from 'radix-themes-devtools'
+import { RadixThemeDevtoolsProvider } from 'ts-devtools-plugin-radix-themes'
 import { TanStackDevtools } from '@tanstack/react-devtools'
 import '@radix-ui/themes/styles.css'
 

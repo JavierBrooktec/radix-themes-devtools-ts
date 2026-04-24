@@ -10,7 +10,7 @@ export default defineConfig({
   ],
   resolve: {
     alias: {
-      'radix-themes-devtools': resolve(__dirname, '../../packages/radix-themes-devtools/src/index.ts'),
+      'ts-devtools-plugin-radix-themes': resolve(__dirname, '../../packages/ts-devtools-plugin-radix-themes/src/index.ts'),
     },
   },
 })

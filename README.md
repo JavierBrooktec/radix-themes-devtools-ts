@@ -1,17 +1,17 @@
-# radix-themes-devtools
+# ts-devtools-plugin-radix-themes
 
-Monorepo for [`radix-themes-devtools`](./packages/radix-themes-devtools) — a [TanStack Devtools](https://tanstack.com/devtools/latest) plugin for [Radix UI Themes](https://www.radix-ui.com/themes).
+Monorepo for [`ts-devtools-plugin-radix-themes`](./packages/ts-devtools-plugin-radix-themes) — a [TanStack Devtools](https://tanstack.com/devtools/latest) plugin for [Radix UI Themes](https://www.radix-ui.com/themes).
 
-📦 **[→ Package docs & usage](./packages/radix-themes-devtools/README.md)**
+📦 **[→ Package docs & usage](./packages/ts-devtools-plugin-radix-themes/README.md)**
 
 ---
 
 ## Structure
 
 ```
-radix-themes-devtools/
+ts-devtools-plugin-radix-themes/
 ├── packages/
-│   └── radix-themes-devtools/   ← the npm package
+│   └── ts-devtools-plugin-radix-themes/   ← the npm package
 └── apps/
     └── playground/              ← dev playground (Vite + TanStack Router)
 ```

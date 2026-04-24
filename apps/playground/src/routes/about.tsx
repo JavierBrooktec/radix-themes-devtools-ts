@@ -5,7 +5,7 @@ export const Route = createFileRoute('/about')({
   component: () => (
     <>
       <Heading size="6">About</Heading>
-      <Text color="gray" mt="2">Playground for radix-themes-devtools.</Text>
+      <Text color="gray" mt="2">Playground for ts-devtools-plugin-radix-themes.</Text>
     </>
   ),
 })

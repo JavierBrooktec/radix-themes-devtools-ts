@@ -1,5 +1,5 @@
 {
-  "name": "radix-themes-devtools-monorepo",
+  "name": "ts-devtools-plugin-radix-themes-monorepo",
   "private": true,
   "scripts": {
     "build": "turbo build",

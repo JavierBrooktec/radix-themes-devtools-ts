@@ -1,6 +1,6 @@
 import { createRootRoute, Outlet, Link } from '@tanstack/react-router'
 import { TanStackDevtools } from '@tanstack/react-devtools'
-import { RadixThemeDevtoolsProvider, createRadixThemePlugin } from 'radix-themes-devtools'
+import { RadixThemeDevtoolsProvider, createRadixThemePlugin } from 'ts-devtools-plugin-radix-themes'
 
 const themePlugin = createRadixThemePlugin({
   defaultTheme: { accentColor: 'indigo', radius: 'medium', scaling: '100%' },
