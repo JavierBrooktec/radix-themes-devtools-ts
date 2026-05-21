@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import { Theme } from '@radix-ui/themes'
 import type { RadixThemeConfig, RadixThemeDevtoolsProviderProps } from './types'
 
-export function RadixThemeDevtoolsProvider({ plugin, children }: RadixThemeDevtoolsProviderProps) {
+export function RadixThemeDevtoolsProvider({ plugin, children, className, style }: RadixThemeDevtoolsProviderProps) {
   const [theme, setTheme] = useState<RadixThemeConfig>(() => plugin.client.currentTheme)
 
   useEffect(() => {
@@ -19,5 +19,5 @@ export function RadixThemeDevtoolsProvider({ plugin, children }: RadixThemeDevto
     }
   }, [plugin])
 
-  return <Theme {...theme}>{children}</Theme>
+  return <Theme {...theme} className={className} style={style}>{children}</Theme>
 }
