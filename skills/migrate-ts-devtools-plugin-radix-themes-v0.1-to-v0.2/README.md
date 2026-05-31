@@ -26,7 +26,7 @@ Copilot y cualquier cliente que entienda ese formato.
 Vía [skills.sh](https://www.skills.sh/):
 
 ```bash
-npx skills add JavierBrooktec/ts-devtools-plugin-radix-themes
+npx skills add JavierBrooktec/radix-themes-devtools-ts
 ```
 
 Esto registra el skill en el directorio de skills de tu cliente.
