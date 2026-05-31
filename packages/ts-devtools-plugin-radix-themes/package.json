@@ -1,6 +1,6 @@
 {
   "name": "ts-devtools-plugin-radix-themes",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "TanStack Devtools plugin for Radix UI Themes — customize your theme in real time from the devtools panel",
   "type": "module",
   "main": "./dist/index.cjs",
@@ -11,7 +11,18 @@
       "types": "./dist/index.d.ts",
       "import": "./dist/index.js",
       "require": "./dist/index.cjs"
-    }
+    },
+    "./provider": {
+      "types": "./dist/provider.d.ts",
+      "import": "./dist/provider.js",
+      "require": "./dist/provider.cjs"
+    },
+    "./plugin": {
+      "types": "./dist/plugin.d.ts",
+      "import": "./dist/plugin.js",
+      "require": "./dist/plugin.cjs"
+    },
+    "./package.json": "./package.json"
   },
   "files": [
     "dist"
@@ -29,6 +40,11 @@
     "@tanstack/devtools-event-client": ">=0.0.1",
     "react": ">=18.0.0",
     "react-dom": ">=18.0.0"
+  },
+  "peerDependenciesMeta": {
+    "@tanstack/devtools-event-client": {
+      "optional": true
+    }
   },
   "devDependencies": {
     "@radix-ui/themes": "^3.2.1",

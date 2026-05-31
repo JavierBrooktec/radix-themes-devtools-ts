@@ -13,10 +13,3 @@ export type RadixThemeEvents = {
 export interface RadixThemePluginOptions {
   defaultTheme?: RadixThemeConfig
 }
-
-export interface RadixThemeDevtoolsProviderProps {
-  plugin: ReturnType<typeof import('./plugin').createRadixThemePlugin>
-  children: React.ReactNode
-  className?: string
-  style?: React.CSSProperties
-}
